@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 5 Google Summer of Code Summary"
+tagline: "Windows Bugs part 1"
 tags : [GSoC, Processing, networking, project]
 ---
 

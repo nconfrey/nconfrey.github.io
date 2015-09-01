@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 3 Google Summer of Code Summary"
+tagline: "Learning GStreamer"
 tags : [GSoC, Processing, networking, project]
 ---
 

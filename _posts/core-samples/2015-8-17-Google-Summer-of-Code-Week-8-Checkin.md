@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 8 Google Summer of Code Summary"
+tagline: "Audio Streaming over GStreamer UDP"
 tags : [GSoC, Processing, networking, project]
 ---
 

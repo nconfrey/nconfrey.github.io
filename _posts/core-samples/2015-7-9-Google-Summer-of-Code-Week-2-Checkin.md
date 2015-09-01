@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 2 Google Summer of Code Summary"
+tagline: "Streaming over UDP"
 tags : [GSoC, Processing, networking, project]
 ---
 

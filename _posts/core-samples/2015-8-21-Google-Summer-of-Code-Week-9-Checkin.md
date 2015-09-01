@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 9 Google Summer of Code Summary"
+tagline: "Finale"
 tags : [GSoC, Processing, networking, project]
 ---
 

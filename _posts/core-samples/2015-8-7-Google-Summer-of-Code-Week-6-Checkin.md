@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 6 Google Summer of Code Summary"
+tagline: "Windows Sucks part 2"
 tags : [GSoC, Processing, networking, project]
 ---
 

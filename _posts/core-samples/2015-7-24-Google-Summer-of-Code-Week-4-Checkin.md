@@ -1,7 +1,7 @@
 ---
 layout: post
 category : GSoC
-tagline: "Week 4 Google Summer of Code Summary"
+tagline: "Project Decisions: Java Bindings of GStreamer"
 tags : [GSoC, Processing, networking, project]
 ---
 
