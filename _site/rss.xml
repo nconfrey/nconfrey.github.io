@@ -5,10 +5,153 @@
         <description>Jekyll Bootstrap - Name Lastname</description>
         <link>http://username.github.io</link>
         <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 31 Aug 2015 17:18:43 -0400</lastBuildDate>
-        <pubDate>Mon, 31 Aug 2015 17:18:43 -0400</pubDate>
+        <lastBuildDate>Tue, 01 Sep 2015 13:49:25 -0400</lastBuildDate>
+        <pubDate>Tue, 01 Sep 2015 13:49:25 -0400</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Google Summer Of Code Week 9 Checkin</title>
+                <description>&lt;p&gt;This is my last official status update about Google Summer of Code – AND I MADE IT! Processing now has a library that can stream video and audio of any different formats to anything that can receive a gstreamer pipeline (like terminals, commandlines, other Processing Sketches). I’m so happy that I was finally able to complete the project I set out for myself. During this past week with help from Andres and another GSoC student Gottfried Haider, I was able to jump the final hurdles in developing my library.&lt;/p&gt;
+
+&lt;p&gt;Things I’ve been able to accomplish this summer (and things that I think will be useful to the Processing community):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linking GStreamer 1.0 to Processing. The video library will no longer be stuck using Java bindings developed for GStreamer 0.10. Andres is interested in rolling this project into the next core release version of the processing video library.&lt;/li&gt;
+  &lt;li&gt;Proven JNI access to C libraries usable in Processing. This method of using JNI to code with C libraries in Java seems easy enough and explainable. I can use my video streaming library as an example of a successful C-&amp;gt;JNI-&amp;gt;Java-&amp;gt;Processing project.&lt;/li&gt;
+  &lt;li&gt;Video and Audio streaming library. If anyone wants to stream video from one computer to another, Processing is now a viable choice.&lt;/li&gt;
+  &lt;li&gt;Access to GStreamer pipeline launch utility. Using my library, users can run GStreamer pipeline strings which exposes all the power of GStreamer, from audio analysis to ripping CDs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I still have things I want to do in the upcoming weeks and will continue work, but in terms of GSoC, I think I was successful!&lt;/p&gt;
+
+&lt;p&gt;You can read more specifics on what I’ve been able to accomplish on the README I plan to attach with my code sample when I submit to Google.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</guid>
+                <pubDate>Fri, 21 Aug 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 8 Checkin</title>
+                <description>&lt;p&gt;Onto the progress report: This past week I was able to get &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming/videoStreaming/src/processing/streaming/Streaming.java#L258&quot;&gt;Audio streaming&lt;/a&gt; to work over UDP using GStreamer 1.0! Thanks to Andres Colubri and a sample library he wrote in C/JNI, I was able to link Processing with GStreamer 1.0 using JNI, opening up many new possibilities for Processing and my own video library. We now have access to the &lt;code&gt;gst_parse_launch()&lt;/code&gt; function in GStreamer, which takes a pipeline string and parses it out into a functioning pipeline. Advanced users of Processing will now be able to take advantage of everything in the latest version of GStreamer.&lt;/p&gt;
+
+&lt;p&gt;I’ve then used this functionality to finally be able to build audio streaming from one Processing sketch to another. The nice thing about finally being built in to GStreamer is the wealth of options for decoding different kinds of files. I can use a &lt;code&gt;decodebin&lt;/code&gt; to work with many different kinds of audio files before sending them out over UDP.&lt;/p&gt;
+
+&lt;p&gt;I’m very excited but there are a couple things that need to get tightened up still. First, I need to thread the pipeline implementation so the sketch can do other things at the same time as sending audio. Second, and perhaps most importantly, I need to work on portability and testing. Given how much of a nightmare developing on Windows was, I hope using what I have now won’t be too difficult to make a version that also runs on Windows. Lastly, there is documentation. I’ve already written very simple tutorial example sketches that just send a song back and forth, but I’d like to develop a more sophisticated demo.&lt;/p&gt;
+
+&lt;p&gt;And, of course, there is also video streaming. The tricky part about video is that GStreamer uses its own window sinks, meaning that it will open a new window to display the video, rather than being contained in the Processing sketch window. Andres and Gottfried, another GSoC student, have already been trying to tackle this problem by using an appsink and appsrc pipeline elements to remove data from the pipeline. As soon as I further tighten up my audio streaming, I’m going to jump in with them and see if we can get videos to be displayed in the Processing window.&lt;/p&gt;
+
+&lt;p&gt;Seems like my project is finally hitting its stride! I do hope that I will be able to continue working until I iron out the last details and create something that will really help the Processing community!&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</guid>
+                <pubDate>Mon, 17 Aug 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 7 Checkin</title>
+                <description>&lt;p&gt;Finished up with Week 7 and I hope to be making some serious progress.&lt;/p&gt;
+
+&lt;p&gt;This week I’ve been developing on Linux, which was wonderful and has made everything move a lot more smoothly. The first half of the week I learned how to use JNI using some basic programs that just passed strings back and forth. After compiling and working with JNI, I felt confident enough to move forward with the project.&lt;/p&gt;
+
+&lt;p&gt;The current plan is to do most of the heavy lifting with C, and work naively with GStreamer. That way it’ll be really easy to work with the pipeline elements if I need to change things to get the data into Processing. The java file will just be a wrapper around the C which will just call the method that I’ve already written in C. Starting this week, I’ve written both the C and the java wrapper, and the Makefile that compiles them both. However, I’m having troubles running the Java which is supposed to take a string on the command line and pass it to the C to make a pipeline for it. I’m getting &lt;code&gt;UnsatisfiedLinkError: no gstreamer-1.0 in java.library.path&lt;/code&gt; when I try to run the Java. The goal for this week is to overcome the link error. Then I’ll just need to make it into a library for Processing!&lt;/p&gt;
+
+&lt;p&gt;I’m looking forward to a good week.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</guid>
+                <pubDate>Fri, 14 Aug 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 6 Checkin</title>
+                <description>&lt;p&gt;Into week 7 now and last week I learned a very valuable lesson: Don’t develop on a Windows computer. With that in mind, I’ve dual-booted my machine into Ubuntu and will continue my development there. The story of last week were increasingly frustrating Windows-based errors.&lt;/p&gt;
+
+&lt;p&gt;The problem I began with last week was an inability to use the UDPsink and src elements in the pipeline in the code I had written in C. It turns out that the source of that error was an outdated Windows network driver, which required a system update to fix. The system update took most of Monday to install and download, which meant I lost a day of productivity. At least that night, I ran my C code and it preformed as expected.&lt;/p&gt;
+
+&lt;p&gt;However, when I woke up the next morning, the same code that ran fine the night before wasn’t working anymore. It would compile in GCC, but then immediately hang and crash without any output (even after doing print statement debugging). I was pretty mystified, and ran it under gdb and got “During startup program exited with code 0xc0000139.” This error code didn’t have much information out on the web, but I surmised it was because of being unable to find certain system files (dll’s) needed to compile. This was especially odd, since it compile fine the night before. I spent Tuesday and Wednesday trying to figure out what could have possibly changed. I did system restores, reinstallations of pretty much everything, and a complete revert of everything in git without luck. Wednesday night I figured out that it was an update from Visual Studio that modified the system path in such a way that the compiler was loading a different version of the C++ runtime executables. By changing the order of my path environment variable, I was finally able to get the code to compile as expected, after three days of fighting.&lt;/p&gt;
+
+&lt;p&gt;This officially concluded step 1 of my project, and the next step is to work with JNI or JNA. In order to learn JNI, I was following the most basic hello world example tutorial online. Everything was going well until it was time to compile. JNI creates a new library that the Java code can link into and then use the native C functions. The problem was that I was using GCC in Cygwin, which is the Windows version of a Unix-like command line. Unbeknownst to me, whenever GCC compiled, it was dependent on the Cygwin dll’s. The first problem was that this obviously wasn’t ever going to be cross platform, but the second problem was that the library wouldn’t work at all outside of Cygwin. If you are curious, you can read more about my problem here as I described it on (stack overflow)[http://stackoverflow.com/questions/31751528/how-to-compile-with-mno-cygwin-or-without-including-cygwin-dlls-with-gcc-4] but the gist of it was that there used to be a simple solution by compiling under the –mno-cygwin flag, but it was depreciated in the newest version of Cygwin, leaving me without options.&lt;/p&gt;
+
+&lt;p&gt;At this point, I was pretty fed up with fighting Windows and so I’ve decided to abandon ship and develop on Linux. Windows didn’t let me go easily and the conversion process took all of Friday and most of the weekend (problems with the Windows backup utility). However, I’m confident that things will be able to move a lot more smoothly now. Gstreamer was developed on Linux, so I think things will be a lot more compatible. Goals for this week are to finish the JNI/JNA conversion stuff and move into step 3, integration with processing. I will have to take some time and set up all my development tools again on the Linux partition, but I hope that can be accomplished in the rest of this afternoon.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</guid>
+                <pubDate>Fri, 07 Aug 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 5 Checkin</title>
+                <description>&lt;p&gt;Moving into week 6 now, and after last week I have a new direction to move in.I have decided to move forward on option #1, working on GStreamer now so that it has the largest effect on Processing. I’ve never been one to shy away from a challenge, and the fact that this is definitely the more difficult route is not that much of a downside. Ideally this way I’ll be able to make a more lasting contribution to Processing in a way that I will be proud about my accomplishments this summer.&lt;/p&gt;
+
+&lt;p&gt;I have identified three major sections for my project going forward and aim to space them out in the time I have left. First, I need to get GStreamer working in its native C to do what I want, namely use the UDP elements to transfer frames and audio. Second, I need to wrap the functions I’ve used in JNI, Java Native Interface, to be able to call the C functions from Java. Lastly, I need to build the Java into my Processing Library.&lt;/p&gt;
+
+&lt;p&gt;Last week I struggled with step 1. What promised to be an easy endeavor was decidedly not. Given that GStreamer was written in C, I thought using the built-in functions would be straightforward. The first hurdle was compiling the tutorial code against the GStreamer libraries. I generally use GCC as my C compiler, but there was no obvious way to include the dependencies and header files the code needed. I spent an afternoon hunting through the GStreamer file hierarchy, and then subsequently having issues with the Windows Installer utility to install the files I needed. I learned a lot more about GCC and including files, directories and library files. Finally, I got the sample tutorial to compile.&lt;/p&gt;
+
+&lt;p&gt;However, that tutorial was written for GStreamer .10 (the very version I am trying to transition away from). I thought compiling against version 1.0 would be as simple as switching the library files in my Makefile, but unfortunately ran into problems here as well. After much head scratching and lots of failed attempts, I used a dependency walker to look at the executable I was compiling and found out that GCC has erroneously added a x86 version of the C++ runtime library rather than the x86_64 version which caused my program to die without any errors. I backtracked against my system environment variables and finally fixed the problem, allowing the version 1.0 to compile and run my sample program!&lt;/p&gt;
+
+&lt;p&gt;However, even using 1.0 and written in C I can’t send packets over the network. I’m using the launch utility which promised to be the same as the command line interface (which I did get to send packets over the network). After I send this message, I’ll go back to trying to figure out why the pipeline fails without error and doesn’t actually send the UDP packets.&lt;/p&gt;
+
+&lt;p&gt;It has definitely been more on-my-feet troubleshooting than actually writing code. I’m heartened by the fact that this is probably really good experience for other real-life developing projects, but I look forward to the next phase of this project where I get to write more code and don’t need to battle so much with Windows or compatibility issues. I have a clear step by step guide of where I’m going now, I just need to push through and keep battling these issues!&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</guid>
+                <pubDate>Fri, 31 Jul 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 4 Checkin</title>
+                <description>&lt;p&gt;Just finished up week 4, onto week 5. I’ve actually hit quite the wall and inflexion point in this past week, and I need some guidance on the best way to proceed.&lt;/p&gt;
+
+&lt;p&gt;I’ve been in back and forth contact with Andres Colubri about GStreamer, and he’s be extremely helpful in pushing me in the right direction with regards to GStreamer. I spent the first half of week 4 still attempting to get GStreamer to work the way I wanted it to. The idea was that GStreamer would handle the audio and video encoding and compression and leave me with the task of figuring out network programming. GStreamer works in a pipeline fashion, with “elements” being placed one after another in a line to transfer video data. I needed the udpsink element to work, which promised to take the bytes in the pipeline and send them out into the network. On the client side, they would have a udpsrc which would take bytes from the network and put them into the pipeline. But after several days still working at this problem, the udpsink element just would not put bytes into the network (verified by working with Wireshark, a utility to sniff network packets).&lt;/p&gt;
+
+&lt;p&gt;Taking a step back, I installed straight GStreamer on the command line which uses the official version, rather than the java bindings version that we are forced to use for Processing (because GStreamer is written in C, so there need to be Java bindings to interact with Processing code). To my surprise, I finally did get the udpsink / udpsrc to work and send video and audio data across the network. The problem was that the Java bindings used in Processing are locked into version .10 of GStreamer, which is end-of-life and not maintained. The version I was able to work was version 1.5, which cannot be used in Java or Processing.&lt;/p&gt;
+
+&lt;p&gt;So now I have a problem ahead of me. In order to use modern GStreamer with Processing (and in order to make my udp connections work), we need to rewrite the Java bindings to support version 1.x of GStreamer. Fortunately, in Google Summer of Code 2014, there was a student who took on this problem and nearly solved it by writing a parser to automatically generate Java files from the GStreamer source code. Unfortunately, he left it uncompleted and disappeared off the face of the planet. In order to make his solution work, I need to re-trace his steps, figure out how his parser works, and figure out what still needs to be done. Andres was the student’s mentor for this project and he says there is still “significant work to be done” in order to get the parser to produce java files that will work reliably. Andres wants refactoring GStreamer to Java to be the next phase of my project, because it will help support the Processing video library as well as my networking library.&lt;/p&gt;
+
+&lt;p&gt;However, this would be a significant change to my project. I would not be doing networking programming anymore, but rather low level systems programing as I attempted to change C files and plugins to Java compatible ones. At the end of the day, I want to make a networking library as my contribution to Processing. With this in mind, I spent Thursday and Friday working to tighten up and extend the work I did at the very beginning of GSoC, which was manually creating datagram packets to send video frames based on your UDP tutorial. I used this method to transmit audio, and it sounded like driving down the highway with the windows open and a faint bit of a song on the radio. This reminds me of the difficulty of compressing and sending audio, all things that GStreamer would do for me, and I would have to reinvent the wheel a bit to get it into my library.&lt;/p&gt;
+
+&lt;p&gt;I can either choose to fix the GStreamer bindings with the hope that it will eventually benefit my networking library, or forgo work on GStreamer and do the networking manually, knowing that it won’t be as robust or well implemented as GStreamer. I’m looking for advice on which path to choose, because in the time I have I can’t do both. Working on the GStreamer risks not actually having a network library at the end of the summer, and working on the networking library risks not having a really good implementation without a builtin video library.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</guid>
+                <pubDate>Fri, 24 Jul 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 3 Checkin</title>
+                <description>&lt;p&gt;Onto week 3. This week was a slow learning week, so I wasn’t able to write as much code as the previous weeks. That being said, let’s get into it.&lt;/p&gt;
+
+&lt;p&gt;Monday and Tuesday were devoted to learning about the Gstreamer framework and understanding how it worked. Wednesday I finally linked in GStreamer into Processing, and then made some &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming%20.10/videoStreaming/src/template/library/VideoBroadcaster.java#L93&quot;&gt;sample pipelines&lt;/a&gt; that played audio or displayed video. The goal is to use the GStreamer framework to buffer and manage the video and audio streams, and then put a &lt;code&gt;udpsink&lt;/code&gt; at the end of it that will send off the stream as udp packets. I’m still struggling with integrating the udp sink.&lt;/p&gt;
+
+&lt;p&gt;At the end of this week, I’m much more comfortable with GStreamer but not quite where I want to be with written code. I’ll keep at it.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</guid>
+                <pubDate>Thu, 16 Jul 2015 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Google Summer Of Code Week 2 Checkin</title>
+                <description>&lt;p&gt;Its been a pretty fun week coding over here. This is the first week I struck out onto my own to write my own network streaming Processing library over UDP. At the end of the week, I was able to create a library that allows Processing users to stream webcam and sketch images over UDP.&lt;/p&gt;
+
+&lt;p&gt;The first half of the week was devoted to setting up the development environment and getting the structure of the library in order to really start work on the video streaming library. Of course, as any “simple” thing is in computing, it took way longer than expected as I ran into many problems. First of all, the buildpaths in the sample processing library template are all for OSX, and so it took me forever to figure out that all the slashes / need to be \ on windows (because one \ is an escape character, so to have an actual slash you need two of them). I also ran into problems finding &lt;code&gt;tools.jar&lt;/code&gt; as part of the JDK and setting up eclipse with the right versions of Java. Finally the last problem was with git submodules, as I forked the processing library template into my working directory so git wouldn’t track any new changes inside those files. These problems consumed my Monday and Tuesday, but then I was able to move onto the more exciting things.&lt;/p&gt;
+
+&lt;p&gt;Starting on Tuesday afternoon, I used a &lt;a href=&quot;http://shiffman.net/2010/11/13/streaming-video-with-udp-in-processing/&quot;&gt;UDP tutorial&lt;/a&gt; to build a simple webcam streaming example program. All the logic of the networking pieces (like setting up datagram ports, compressing the image, creating packets) is all done in my library now, so sending a frame is as simple as calling &lt;code&gt;broadcast(c)&lt;/code&gt;, where c is a &lt;code&gt;Capture&lt;/code&gt; object (although it could be any &lt;code&gt;PImage&lt;/code&gt;). The example sketches I wrote are super super simple now, and I’m proud of how little code a Processing user will have to write to stream webcam feeds. The library code is structured into two files, &lt;code&gt;videoBroadcaster.java&lt;/code&gt; and &lt;code&gt;videoReceiver.java&lt;/code&gt;, which act as a server/client.&lt;/p&gt;
+
+&lt;p&gt;I then built on top of the &lt;code&gt;broadcast()&lt;/code&gt; function to be able to share any sketch’s screen. By simply calling &lt;code&gt;screenBroadcast()&lt;/code&gt; with no arguments in the draw function, whatever is currently displayed on one sketch’s screen will be streamed to the client sketch. This makes it trivial to share complex designs across different Processing sketches.&lt;/p&gt;
+
+&lt;p&gt;Finally, I took another look at what I built last week and modified the &lt;code&gt;serverEvent&lt;/code&gt; function so that it won’t conflict/break other example code. Now there is a method &lt;code&gt;serverDisconnectEvent(Server, Client)&lt;/code&gt; that is fired whenever a client disconnects. This is important now that I can keep track of individual clients, because then I can find out which exact client left. I think the code is robust enough to potentially be merged into the actual core library.&lt;/p&gt;
+
+&lt;p&gt;There are obviously many next steps that can be done. First, these methods are all blocking which is not ideal. Incorporating threads is an obvious next step. I also want to stream audio, because I can’t find a library that will do it. I’m going to take some mentor advice and look into &lt;a href=&quot;http://gstreamer.freedesktop.org/&quot;&gt;GStreamer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That sums up the week! Example code for my new Processing functions can be found &lt;a href=&quot;https://github.com/nconfrey/GSoC/tree/master/coreExamples&quot;&gt;here&lt;/a&gt;, the sending and receiving classes are &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming/videoStreaming/src/processing/streaming/VideoBroadcaster.java&quot;&gt;here&lt;/a&gt;. Drop a comment if the UDP streaming either worked really well for you or broke–either way, it’s useful information!&lt;/p&gt;
+</description>
+                <link>http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</link>
+                <guid>http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</guid>
+                <pubDate>Thu, 09 Jul 2015 00:00:00 -0400</pubDate>
+        </item>
 
         <item>
                 <title>Jekyll Introduction</title>

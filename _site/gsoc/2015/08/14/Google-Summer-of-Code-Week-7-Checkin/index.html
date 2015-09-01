@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Hello World!</title>
+    <title>Google Summer Of Code Week 7 Checkin</title>
     
     <meta name="author" content="Name Lastname">
 
@@ -130,67 +130,99 @@
       <div class="container">
         
 <div class="page-header">
-  <h1>Hello World!  <small>Supporting tagline</small></h1>
+  <h1>Google Summer Of Code Week 7 Checkin <small>Week 7 Google Summer of Code Summary</small></h1>
 </div>
 
-<div class="row">
+<div class="row post-full">
   <div class="col-xs-12">
+    <div class="date">
+      <span>14 August 2015</span>
+    </div>
+    <div class="content">
+      <p>Finished up with Week 7 and I hope to be making some serious progress.</p>
+
+<p>This week I’ve been developing on Linux, which was wonderful and has made everything move a lot more smoothly. The first half of the week I learned how to use JNI using some basic programs that just passed strings back and forth. After compiling and working with JNI, I felt confident enough to move forward with the project.</p>
+
+<p>The current plan is to do most of the heavy lifting with C, and work naively with GStreamer. That way it’ll be really easy to work with the pipeline elements if I need to change things to get the data into Processing. The java file will just be a wrapper around the C which will just call the method that I’ve already written in C. Starting this week, I’ve written both the C and the java wrapper, and the Makefile that compiles them both. However, I’m having troubles running the Java which is supposed to take a string on the command line and pass it to the C to make a pipeline for it. I’m getting <code>UnsatisfiedLinkError: no gstreamer-1.0 in java.library.path</code> when I try to run the Java. The goal for this week is to overcome the link error. Then I’ll just need to make it into a library for Processing!</p>
+
+<p>I’m looking forward to a good week.</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#gsoc-ref">
+    		gsoc <span>8</span>
+    	</a></li>
     
-<p>Read <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll Quick Start</a></p>
-
-<p>Complete usage and documentation available at: <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a></p>
-
-<h2 id="update-author-attributes">Update Author Attributes</h2>
-
-<p>In <code>_config.yml</code> remember to specify your own data:</p>
-
-<pre><code>title : My Blog =)
-
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-</code></pre>
-
-<p>The theme should reference these variables whenever needed.</p>
-
-<h2 id="sample-posts">Sample Posts</h2>
-
-<p>This blog contains sample posts which help stage pages and blog data.
-When you don&#8217;t need the samples anymore just delete the <code>_posts/core-samples</code> folder.</p>
-
-<pre><code>$ rm -rf _posts/core-samples
-</code></pre>
-
-<p>Here&#8217;s a sample &#8220;posts list&#8221;.</p>
-
-<ul class="posts">
   
-    <li><span>21 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin">Google Summer Of Code Week 9 Checkin</a></li>
-  
-    <li><span>17 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin">Google Summer Of Code Week 8 Checkin</a></li>
-  
-    <li><span>14 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin">Google Summer Of Code Week 7 Checkin</a></li>
-  
-    <li><span>07 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin">Google Summer Of Code Week 6 Checkin</a></li>
-  
-    <li><span>31 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin">Google Summer Of Code Week 5 Checkin</a></li>
-  
-    <li><span>24 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin">Google Summer Of Code Week 4 Checkin</a></li>
-  
-    <li><span>16 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin">Google Summer Of Code Week 3 Checkin</a></li>
-  
-    <li><span>09 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin">Google Summer Of Code Week 2 Checkin</a></li>
-  
-    <li><span>29 Dec 2011</span> &raquo; <a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-  
-</ul>
 
-<h2 id="to-do">To-Do</h2>
 
-<p>This theme is still unfinished. If you&#8217;d like to be added as a contributor, <a href="http://github.com/plusjade/jekyll-bootstrap">please fork</a>!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.</p>
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#GSoC-ref">GSoC <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#Processing-ref">Processing <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#networking-ref">networking <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#project-ref">project <span>8</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin" title="Google Summer Of Code Week 6 Checkin">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next"><a href="/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin" title="Google Summer Of Code Week 8 Checkin">Next &raquo;</a></li>
+    
+    </ul>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 
 
   </div>

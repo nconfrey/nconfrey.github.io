@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Google Summer Of Code Week 5 Checkin</title>
+    
+    <meta name="author" content="Name Lastname">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap styles -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Sticky Footer -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="/assets/themes/bootstrap-3/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jekyll Bootstrap</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="container">
+        
+<div class="page-header">
+  <h1>Google Summer Of Code Week 5 Checkin <small>Week 5 Google Summer of Code Summary</small></h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+    <div class="date">
+      <span>31 July 2015</span>
+    </div>
+    <div class="content">
+      <p>Moving into week 6 now, and after last week I have a new direction to move in.I have decided to move forward on option #1, working on GStreamer now so that it has the largest effect on Processing. I’ve never been one to shy away from a challenge, and the fact that this is definitely the more difficult route is not that much of a downside. Ideally this way I’ll be able to make a more lasting contribution to Processing in a way that I will be proud about my accomplishments this summer.</p>
+
+<p>I have identified three major sections for my project going forward and aim to space them out in the time I have left. First, I need to get GStreamer working in its native C to do what I want, namely use the UDP elements to transfer frames and audio. Second, I need to wrap the functions I’ve used in JNI, Java Native Interface, to be able to call the C functions from Java. Lastly, I need to build the Java into my Processing Library.</p>
+
+<p>Last week I struggled with step 1. What promised to be an easy endeavor was decidedly not. Given that GStreamer was written in C, I thought using the built-in functions would be straightforward. The first hurdle was compiling the tutorial code against the GStreamer libraries. I generally use GCC as my C compiler, but there was no obvious way to include the dependencies and header files the code needed. I spent an afternoon hunting through the GStreamer file hierarchy, and then subsequently having issues with the Windows Installer utility to install the files I needed. I learned a lot more about GCC and including files, directories and library files. Finally, I got the sample tutorial to compile.</p>
+
+<p>However, that tutorial was written for GStreamer .10 (the very version I am trying to transition away from). I thought compiling against version 1.0 would be as simple as switching the library files in my Makefile, but unfortunately ran into problems here as well. After much head scratching and lots of failed attempts, I used a dependency walker to look at the executable I was compiling and found out that GCC has erroneously added a x86 version of the C++ runtime library rather than the x86_64 version which caused my program to die without any errors. I backtracked against my system environment variables and finally fixed the problem, allowing the version 1.0 to compile and run my sample program!</p>
+
+<p>However, even using 1.0 and written in C I can’t send packets over the network. I’m using the launch utility which promised to be the same as the command line interface (which I did get to send packets over the network). After I send this message, I’ll go back to trying to figure out why the pipeline fails without error and doesn’t actually send the UDP packets.</p>
+
+<p>It has definitely been more on-my-feet troubleshooting than actually writing code. I’m heartened by the fact that this is probably really good experience for other real-life developing projects, but I look forward to the next phase of this project where I get to write more code and don’t need to battle so much with Windows or compatibility issues. I have a clear step by step guide of where I’m going now, I just need to push through and keep battling these issues!</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#gsoc-ref">
+    		gsoc <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#GSoC-ref">GSoC <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#Processing-ref">Processing <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#networking-ref">networking <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#project-ref">project <span>8</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin" title="Google Summer Of Code Week 4 Checkin">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next"><a href="/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin" title="Google Summer Of Code Week 6 Checkin">Next &raquo;</a></li>
+    
+    </ul>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2015 Name Lastname
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        </p>
+      </div>
+    </div>
+
+    
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap-3/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

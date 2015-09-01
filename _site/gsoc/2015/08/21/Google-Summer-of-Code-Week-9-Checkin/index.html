@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Hello World!</title>
+    <title>Google Summer Of Code Week 9 Checkin</title>
     
     <meta name="author" content="Name Lastname">
 
@@ -130,67 +130,106 @@
       <div class="container">
         
 <div class="page-header">
-  <h1>Hello World!  <small>Supporting tagline</small></h1>
+  <h1>Google Summer Of Code Week 9 Checkin <small>Week 9 Google Summer of Code Summary</small></h1>
 </div>
 
-<div class="row">
+<div class="row post-full">
   <div class="col-xs-12">
-    
-<p>Read <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll Quick Start</a></p>
+    <div class="date">
+      <span>21 August 2015</span>
+    </div>
+    <div class="content">
+      <p>This is my last official status update about Google Summer of Code – AND I MADE IT! Processing now has a library that can stream video and audio of any different formats to anything that can receive a gstreamer pipeline (like terminals, commandlines, other Processing Sketches). I’m so happy that I was finally able to complete the project I set out for myself. During this past week with help from Andres and another GSoC student Gottfried Haider, I was able to jump the final hurdles in developing my library.</p>
 
-<p>Complete usage and documentation available at: <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a></p>
+<p>Things I’ve been able to accomplish this summer (and things that I think will be useful to the Processing community):</p>
 
-<h2 id="update-author-attributes">Update Author Attributes</h2>
-
-<p>In <code>_config.yml</code> remember to specify your own data:</p>
-
-<pre><code>title : My Blog =)
-
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-</code></pre>
-
-<p>The theme should reference these variables whenever needed.</p>
-
-<h2 id="sample-posts">Sample Posts</h2>
-
-<p>This blog contains sample posts which help stage pages and blog data.
-When you don&#8217;t need the samples anymore just delete the <code>_posts/core-samples</code> folder.</p>
-
-<pre><code>$ rm -rf _posts/core-samples
-</code></pre>
-
-<p>Here&#8217;s a sample &#8220;posts list&#8221;.</p>
-
-<ul class="posts">
-  
-    <li><span>21 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin">Google Summer Of Code Week 9 Checkin</a></li>
-  
-    <li><span>17 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin">Google Summer Of Code Week 8 Checkin</a></li>
-  
-    <li><span>14 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin">Google Summer Of Code Week 7 Checkin</a></li>
-  
-    <li><span>07 Aug 2015</span> &raquo; <a href="/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin">Google Summer Of Code Week 6 Checkin</a></li>
-  
-    <li><span>31 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin">Google Summer Of Code Week 5 Checkin</a></li>
-  
-    <li><span>24 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin">Google Summer Of Code Week 4 Checkin</a></li>
-  
-    <li><span>16 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin">Google Summer Of Code Week 3 Checkin</a></li>
-  
-    <li><span>09 Jul 2015</span> &raquo; <a href="/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin">Google Summer Of Code Week 2 Checkin</a></li>
-  
-    <li><span>29 Dec 2011</span> &raquo; <a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-  
+<ul>
+  <li>Linking GStreamer 1.0 to Processing. The video library will no longer be stuck using Java bindings developed for GStreamer 0.10. Andres is interested in rolling this project into the next core release version of the processing video library.</li>
+  <li>Proven JNI access to C libraries usable in Processing. This method of using JNI to code with C libraries in Java seems easy enough and explainable. I can use my video streaming library as an example of a successful C-&gt;JNI-&gt;Java-&gt;Processing project.</li>
+  <li>Video and Audio streaming library. If anyone wants to stream video from one computer to another, Processing is now a viable choice.</li>
+  <li>Access to GStreamer pipeline launch utility. Using my library, users can run GStreamer pipeline strings which exposes all the power of GStreamer, from audio analysis to ripping CDs.</li>
 </ul>
 
-<h2 id="to-do">To-Do</h2>
+<p>I still have things I want to do in the upcoming weeks and will continue work, but in terms of GSoC, I think I was successful!</p>
 
-<p>This theme is still unfinished. If you&#8217;d like to be added as a contributor, <a href="http://github.com/plusjade/jekyll-bootstrap">please fork</a>!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.</p>
+<p>You can read more specifics on what I’ve been able to accomplish on the README I plan to attach with my code sample when I submit to Google.</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#gsoc-ref">
+    		gsoc <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#GSoC-ref">GSoC <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#Processing-ref">Processing <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#networking-ref">networking <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#project-ref">project <span>8</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin" title="Google Summer Of Code Week 8 Checkin">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next disabled"><a>Next &rarr;</a>
+    
+    </ul>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 
 
   </div>
