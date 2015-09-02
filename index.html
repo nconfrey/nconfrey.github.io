@@ -1,0 +1,105 @@
+---
+layout: home
+title: Hello World!
+tagline: Supporting tagline
+---
+
+<!DOCTYPE html>
+<html>
+
+<head data-gwd-animation-mode="proMode">
+  <meta charset="utf-8">
+  <title>Homepage</title>
+  <meta name="generator" content="Google Web Designer 1.4.1.0901">
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      -webkit-transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      -webkit-transform-style: preserve-3d;
+      background-color: transparent;
+    }
+    .gwd-div-cfyx {
+      position: relative;
+      font-family: 'Times New Roman';
+      text-align: center;
+      margin: 0px auto;
+      color: rgb(0, 0, 0);
+      font-size: 72px;
+      top: 16px;
+      left: 0px;
+      -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      -webkit-transform-style: preserve-3d;
+    }
+    .display-table {
+      position: relative;
+      margin: 0px auto;
+      text-align: center;
+      border-collapse: collapse;
+      -webkit-transform: translate3d(0px, 100px, 0px);
+      -webkit-transform-style: preserve-3d;
+    }
+    tr {
+      border-collapse: collapse;
+    }
+    .gwd-table-vmuu {
+      -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .gwd-table-csr7 {
+      -webkit-transform-style: preserve-3d;
+    }
+    .inner {
+      position: absolute;
+      margin: 0px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gwd-div-cfyx">Nick Confrey</div>
+  <table class="display-table">
+    <tbody>
+      <tr class="display-row">
+        <td class="display-row">
+          <text class="inner">Introspection</text>
+            <img src="http://nconfrey.github.io/assets/introspection.png" width="300" height="300">
+        </td>
+        <td>
+          <text class="inner">Snazz Industries</text>
+          <img src="http://nconfrey.github.io/assets/snazz.JPG" width="300" height="300">
+        </td>
+        <td>
+          <text class="inner">EnvisionDo</text>
+          <img src="http://nconfrey.github.io/assets/envisionDo.png" width="300" height="300">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <text class="inner">Scav</text>
+          <img src="http://nconfrey.github.io/assets/samplesquare.jpg" width="300" height="300">
+        </td>
+        <td>
+          <text class="inner">Google Summer of Code</text>
+          <img src="http://nconfrey.github.io/assets/GSoC.png" width="300" height="300">
+        </td>
+        <td>
+          <text class="inner">Vittles</text>
+          <img src="http://nconfrey.github.io/assets/vittles.png" width="300" height="300">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  Here's a sample "posts list".
+
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</body>
+
+</html>
