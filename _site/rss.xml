@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-        <title>Confrey Page</title>
-        <description>Confrey Page - Nick Confrey</description>
+        <title>Home</title>
+        <description>Home - Nick Confrey</description>
         <link>http://nconfrey.github.io</link>
         <atom:link href="http://nconfrey.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 01 Sep 2015 20:41:00 -0400</lastBuildDate>
-        <pubDate>Tue, 01 Sep 2015 20:41:00 -0400</pubDate>
+        <lastBuildDate>Wed, 02 Sep 2015 13:01:46 -0400</lastBuildDate>
+        <pubDate>Wed, 02 Sep 2015 13:01:46 -0400</pubDate>
         <ttl>60</ttl>
 
 

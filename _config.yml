@@ -10,8 +10,8 @@ highlighter: pygments
 #
 title : Home
 tagline: Still learning
-author : Nick Confrey
-  name : Nick Confrey
+author :
+  name :  Nick Confrey 
   email : nick@confrey.com
   github : nconfrey
   twitter : nconfrey
