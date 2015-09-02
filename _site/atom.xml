@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Jekyll Bootstrap</title>
- <link href="http://username.github.io/atom.xml" rel="self"/>
- <link href="http://username.github.io"/>
- <updated>2015-09-01T13:49:25-04:00</updated>
- <id>http://username.github.io</id>
+ <title>Confrey Page</title>
+ <link href="http://nconfrey.github.io/atom.xml" rel="self"/>
+ <link href="http://nconfrey.github.io"/>
+ <updated>2015-09-01T20:41:00-04:00</updated>
+ <id>http://nconfrey.github.io</id>
  <author>
-   <name>Name Lastname</name>
-   <email>blah@email.test</email>
+   <name>Nick Confrey</name>
+   <email>nick@confrey.com</email>
  </author>
 
  
  <entry>
    <title>Google Summer Of Code Week 9 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin"/>
    <updated>2015-08-21T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</id>
    <content type="html">&lt;p&gt;This is my last official status update about Google Summer of Code – AND I MADE IT! Processing now has a library that can stream video and audio of any different formats to anything that can receive a gstreamer pipeline (like terminals, commandlines, other Processing Sketches). I’m so happy that I was finally able to complete the project I set out for myself. During this past week with help from Andres and another GSoC student Gottfried Haider, I was able to jump the final hurdles in developing my library.&lt;/p&gt;
 
 &lt;p&gt;Things I’ve been able to accomplish this summer (and things that I think will be useful to the Processing community):&lt;/p&gt;
@@ -36,9 +36,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 8 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin"/>
    <updated>2015-08-17T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</id>
    <content type="html">&lt;p&gt;Onto the progress report: This past week I was able to get &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming/videoStreaming/src/processing/streaming/Streaming.java#L258&quot;&gt;Audio streaming&lt;/a&gt; to work over UDP using GStreamer 1.0! Thanks to Andres Colubri and a sample library he wrote in C/JNI, I was able to link Processing with GStreamer 1.0 using JNI, opening up many new possibilities for Processing and my own video library. We now have access to the &lt;code&gt;gst_parse_launch()&lt;/code&gt; function in GStreamer, which takes a pipeline string and parses it out into a functioning pipeline. Advanced users of Processing will now be able to take advantage of everything in the latest version of GStreamer.&lt;/p&gt;
 
 &lt;p&gt;I’ve then used this functionality to finally be able to build audio streaming from one Processing sketch to another. The nice thing about finally being built in to GStreamer is the wealth of options for decoding different kinds of files. I can use a &lt;code&gt;decodebin&lt;/code&gt; to work with many different kinds of audio files before sending them out over UDP.&lt;/p&gt;
@@ -53,9 +53,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 7 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin"/>
    <updated>2015-08-14T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</id>
    <content type="html">&lt;p&gt;Finished up with Week 7 and I hope to be making some serious progress.&lt;/p&gt;
 
 &lt;p&gt;This week I’ve been developing on Linux, which was wonderful and has made everything move a lot more smoothly. The first half of the week I learned how to use JNI using some basic programs that just passed strings back and forth. After compiling and working with JNI, I felt confident enough to move forward with the project.&lt;/p&gt;
@@ -68,9 +68,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 6 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin"/>
    <updated>2015-08-07T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</id>
    <content type="html">&lt;p&gt;Into week 7 now and last week I learned a very valuable lesson: Don’t develop on a Windows computer. With that in mind, I’ve dual-booted my machine into Ubuntu and will continue my development there. The story of last week were increasingly frustrating Windows-based errors.&lt;/p&gt;
 
 &lt;p&gt;The problem I began with last week was an inability to use the UDPsink and src elements in the pipeline in the code I had written in C. It turns out that the source of that error was an outdated Windows network driver, which required a system update to fix. The system update took most of Monday to install and download, which meant I lost a day of productivity. At least that night, I ran my C code and it preformed as expected.&lt;/p&gt;
@@ -85,9 +85,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 5 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin"/>
    <updated>2015-07-31T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</id>
    <content type="html">&lt;p&gt;Moving into week 6 now, and after last week I have a new direction to move in.I have decided to move forward on option #1, working on GStreamer now so that it has the largest effect on Processing. I’ve never been one to shy away from a challenge, and the fact that this is definitely the more difficult route is not that much of a downside. Ideally this way I’ll be able to make a more lasting contribution to Processing in a way that I will be proud about my accomplishments this summer.&lt;/p&gt;
 
 &lt;p&gt;I have identified three major sections for my project going forward and aim to space them out in the time I have left. First, I need to get GStreamer working in its native C to do what I want, namely use the UDP elements to transfer frames and audio. Second, I need to wrap the functions I’ve used in JNI, Java Native Interface, to be able to call the C functions from Java. Lastly, I need to build the Java into my Processing Library.&lt;/p&gt;
@@ -104,9 +104,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 4 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin"/>
    <updated>2015-07-24T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</id>
    <content type="html">&lt;p&gt;Just finished up week 4, onto week 5. I’ve actually hit quite the wall and inflexion point in this past week, and I need some guidance on the best way to proceed.&lt;/p&gt;
 
 &lt;p&gt;I’ve been in back and forth contact with Andres Colubri about GStreamer, and he’s be extremely helpful in pushing me in the right direction with regards to GStreamer. I spent the first half of week 4 still attempting to get GStreamer to work the way I wanted it to. The idea was that GStreamer would handle the audio and video encoding and compression and leave me with the task of figuring out network programming. GStreamer works in a pipeline fashion, with “elements” being placed one after another in a line to transfer video data. I needed the udpsink element to work, which promised to take the bytes in the pipeline and send them out into the network. On the client side, they would have a udpsrc which would take bytes from the network and put them into the pipeline. But after several days still working at this problem, the udpsink element just would not put bytes into the network (verified by working with Wireshark, a utility to sniff network packets).&lt;/p&gt;
@@ -123,9 +123,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 3 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin"/>
    <updated>2015-07-16T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</id>
    <content type="html">&lt;p&gt;Onto week 3. This week was a slow learning week, so I wasn’t able to write as much code as the previous weeks. That being said, let’s get into it.&lt;/p&gt;
 
 &lt;p&gt;Monday and Tuesday were devoted to learning about the Gstreamer framework and understanding how it worked. Wednesday I finally linked in GStreamer into Processing, and then made some &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming%20.10/videoStreaming/src/template/library/VideoBroadcaster.java#L93&quot;&gt;sample pipelines&lt;/a&gt; that played audio or displayed video. The goal is to use the GStreamer framework to buffer and manage the video and audio streams, and then put a &lt;code&gt;udpsink&lt;/code&gt; at the end of it that will send off the stream as udp packets. I’m still struggling with integrating the udp sink.&lt;/p&gt;
@@ -136,9 +136,9 @@
  
  <entry>
    <title>Google Summer Of Code Week 2 Checkin</title>
-   <link href="http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin"/>
+   <link href="http://nconfrey.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin"/>
    <updated>2015-07-09T00:00:00-04:00</updated>
-   <id>http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</id>
+   <id>http://nconfrey.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</id>
    <content type="html">&lt;p&gt;Its been a pretty fun week coding over here. This is the first week I struck out onto my own to write my own network streaming Processing library over UDP. At the end of the week, I was able to create a library that allows Processing users to stream webcam and sketch images over UDP.&lt;/p&gt;
 
 &lt;p&gt;The first half of the week was devoted to setting up the development environment and getting the structure of the library in order to really start work on the video streaming library. Of course, as any “simple” thing is in computing, it took way longer than expected as I ran into many problems. First of all, the buildpaths in the sample processing library template are all for OSX, and so it took me forever to figure out that all the slashes / need to be \ on windows (because one \ is an escape character, so to have an actual slash you need two of them). I also ran into problems finding &lt;code&gt;tools.jar&lt;/code&gt; as part of the JDK and setting up eclipse with the right versions of Java. Finally the last problem was with git submodules, as I forked the processing library template into my working directory so git wouldn’t track any new changes inside those files. These problems consumed my Monday and Tuesday, but then I was able to move onto the more exciting things.&lt;/p&gt;
@@ -157,9 +157,9 @@
  
  <entry>
    <title>Jekyll Introduction</title>
-   <link href="http://username.github.io/lessons/2011/12/29/jekyll-introduction"/>
+   <link href="http://nconfrey.github.io/lessons/2011/12/29/jekyll-introduction"/>
    <updated>2011-12-29T00:00:00-05:00</updated>
-   <id>http://username.github.io/lessons/2011/12/29/jekyll-introduction</id>
+   <id>http://nconfrey.github.io/lessons/2011/12/29/jekyll-introduction</id>
    <content type="html">
 &lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 Directly following the intro we&amp;#8217;ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;

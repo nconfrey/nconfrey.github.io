@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-        <title>Jekyll Bootstrap</title>
-        <description>Jekyll Bootstrap - Name Lastname</description>
-        <link>http://username.github.io</link>
-        <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 01 Sep 2015 13:49:25 -0400</lastBuildDate>
-        <pubDate>Tue, 01 Sep 2015 13:49:25 -0400</pubDate>
+        <title>Confrey Page</title>
+        <description>Confrey Page - Nick Confrey</description>
+        <link>http://nconfrey.github.io</link>
+        <atom:link href="http://nconfrey.github.io/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Tue, 01 Sep 2015 20:41:00 -0400</lastBuildDate>
+        <pubDate>Tue, 01 Sep 2015 20:41:00 -0400</pubDate>
         <ttl>60</ttl>
 
 
@@ -27,8 +27,8 @@
 
 &lt;p&gt;You can read more specifics on what I’ve been able to accomplish on the README I plan to attach with my code sample when I submit to Google.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/08/21/Google-Summer-of-Code-Week-9-Checkin</guid>
                 <pubDate>Fri, 21 Aug 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -44,8 +44,8 @@
 
 &lt;p&gt;Seems like my project is finally hitting its stride! I do hope that I will be able to continue working until I iron out the last details and create something that will really help the Processing community!&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/08/17/Google-Summer-of-Code-Week-8-Checkin</guid>
                 <pubDate>Mon, 17 Aug 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -59,8 +59,8 @@
 
 &lt;p&gt;I’m looking forward to a good week.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/08/14/Google-Summer-of-Code-Week-7-Checkin</guid>
                 <pubDate>Fri, 14 Aug 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -76,8 +76,8 @@
 
 &lt;p&gt;At this point, I was pretty fed up with fighting Windows and so I’ve decided to abandon ship and develop on Linux. Windows didn’t let me go easily and the conversion process took all of Friday and most of the weekend (problems with the Windows backup utility). However, I’m confident that things will be able to move a lot more smoothly now. Gstreamer was developed on Linux, so I think things will be a lot more compatible. Goals for this week are to finish the JNI/JNA conversion stuff and move into step 3, integration with processing. I will have to take some time and set up all my development tools again on the Linux partition, but I hope that can be accomplished in the rest of this afternoon.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/08/07/Google-Summer-of-Code-Week-6-Checkin</guid>
                 <pubDate>Fri, 07 Aug 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -95,8 +95,8 @@
 
 &lt;p&gt;It has definitely been more on-my-feet troubleshooting than actually writing code. I’m heartened by the fact that this is probably really good experience for other real-life developing projects, but I look forward to the next phase of this project where I get to write more code and don’t need to battle so much with Windows or compatibility issues. I have a clear step by step guide of where I’m going now, I just need to push through and keep battling these issues!&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/07/31/Google-Summer-of-Code-Week-5-Checkin</guid>
                 <pubDate>Fri, 31 Jul 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -114,8 +114,8 @@
 
 &lt;p&gt;I can either choose to fix the GStreamer bindings with the hope that it will eventually benefit my networking library, or forgo work on GStreamer and do the networking manually, knowing that it won’t be as robust or well implemented as GStreamer. I’m looking for advice on which path to choose, because in the time I have I can’t do both. Working on the GStreamer risks not actually having a network library at the end of the summer, and working on the networking library risks not having a really good implementation without a builtin video library.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/07/24/Google-Summer-of-Code-Week-4-Checkin</guid>
                 <pubDate>Fri, 24 Jul 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -127,8 +127,8 @@
 
 &lt;p&gt;At the end of this week, I’m much more comfortable with GStreamer but not quite where I want to be with written code. I’ll keep at it.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/07/16/Google-Summer-of-Code-Week-3-Checkin</guid>
                 <pubDate>Thu, 16 Jul 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -148,8 +148,8 @@
 
 &lt;p&gt;That sums up the week! Example code for my new Processing functions can be found &lt;a href=&quot;https://github.com/nconfrey/GSoC/tree/master/coreExamples&quot;&gt;here&lt;/a&gt;, the sending and receiving classes are &lt;a href=&quot;https://github.com/nconfrey/GSoC/blob/master/videoStreaming/videoStreaming/src/processing/streaming/VideoBroadcaster.java&quot;&gt;here&lt;/a&gt;. Drop a comment if the UDP streaming either worked really well for you or broke–either way, it’s useful information!&lt;/p&gt;
 </description>
-                <link>http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</link>
-                <guid>http://username.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</guid>
+                <link>http://nconfrey.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</link>
+                <guid>http://nconfrey.github.io/gsoc/2015/07/09/Google-Summer-of-Code-Week-2-Checkin</guid>
                 <pubDate>Thu, 09 Jul 2015 00:00:00 -0400</pubDate>
         </item>
 
@@ -571,8 +571,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 &lt;p&gt;Please take a look at []()
 or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you&amp;#8217;d like.&lt;/p&gt;
 </description>
-                <link>http://username.github.io/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://username.github.io/lessons/2011/12/29/jekyll-introduction</guid>
+                <link>http://nconfrey.github.io/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>http://nconfrey.github.io/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>Thu, 29 Dec 2011 00:00:00 -0500</pubDate>
         </item>
 
