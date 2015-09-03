@@ -10,12 +10,12 @@ tagline: Supporting tagline
 <head data-gwd-animation-mode="proMode">
   <meta charset="utf-8">
   <title>Homepage</title>
-  <meta name="generator" content="Google Web Designer 1.4.1.0901">
   <style type="text/css">
     html, body {
       t: 100%;
       margin: 0px;
     }
+    @font-face { font-family: headerFont; src: url('assets/BebasNeue.otf'); }
     body {
       -webkit-transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       -webkit-transform-style: preserve-3d;
@@ -23,22 +23,33 @@ tagline: Supporting tagline
     }
     .gwd-div-cfyx {
       position: relative;
-      font-family: 'Times New Roman';
+      font-family: 'headerFont';
       text-align: center;
       margin: 0px auto;
       color: rgb(0, 0, 0);
-      font-size: 72px;
+      font-size: 90px;
       top: 16px;
       left: 0px;
       -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       -webkit-transform-style: preserve-3d;
+    }
+
+    .blogHeader {
+      position: relative;
+      font-family: 'headerFont';
+      text-align: center;
+      margin: 0px auto;
+      color: rgb(0, 0, 0);
+      font-size: 48px;
+      top: 16px;
+      left: 0px;
     }
     .display-table {
       position: relative;
       margin: 0px auto;
       text-align: center;
       border-collapse: collapse;
-      -webkit-transform: translate3d(0px, 100px, 0px);
+      -webkit-transform: translate3d(0px, 50px, 0px);
       -webkit-transform-style: preserve-3d;
     }
     tr {
@@ -70,19 +81,25 @@ tagline: Supporting tagline
         <td class="display-row">
           <text class="inner">Introspection</text>
           <a href="https://github.com/nconfrey/introspection">
-            <img class="rower" class="rower" src="/assets/introspection.png">
+            <img class="rower" src="/assets/introspection.png" 
+              onmouseover="this.src='/assets/introspection.gif'"
+              onmouseout="this.src='/assets/introspection.png'"/>
           </a>
         </td>
         <td>
           <text class="inner">Snazz Industries</text>
           <a href="http://snazzindustries.com">
-            <img class="rower" src="/assets/snazz.JPG" >
+            <img class="rower" src="/assets/snazz.JPG"
+              onmouseover="this.src='/assets/snazz.gif'"
+              onmouseout="this.src='/assets/snazz.JPG'"/>
           </a>
         </td>
         <td>
           <a href="http://envisiondo.org">
           <text class="inner">EnvisionDo</text>
-            <img class="rower" src="/assets/envisionDo.png" >
+            <img class="rower" src="/assets/envisionDo.png"
+              onmouseover="this.src='/assets/envisionDo2.jpg'"
+              onmouseout="this.src='/assets/envisionDo.png'"/>
           </a>
         </td>
       </tr>
@@ -102,12 +119,16 @@ tagline: Supporting tagline
         <td>
           <text class="inner">Vittles</text>
           <a href="http://eatvittles.com">
-            <img class="rower" src="/assets/vittles.png" >
+            <img class="rower" src="/assets/vittles.png"
+              onmouseover="this.src='/assets/vittles2.jpg'"
+              onmouseout="this.src='/assets/vittles.png'"/>
           </a>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <div class="blogHeader">I also Blog</div>
 
   Here's a sample "posts list".
 
