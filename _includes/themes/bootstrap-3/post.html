@@ -6,7 +6,7 @@
 <div class="row post-full">
   <div class="col-xs-12">
     <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
+      <span>{{ page.date | date: '%B %d, %Y' }}</span>
     </div>
     <div class="content">
       {{ content }}

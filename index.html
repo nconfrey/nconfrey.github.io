@@ -15,7 +15,8 @@ tagline: Supporting tagline
       t: 100%;
       margin: 0px;
     }
-    @font-face { font-family: headerFont; src: url('assets/BebasNeue.otf'); }
+    @font-face { font-family: headerFont; src: url('assets/fonts/BebasNeue.otf'); }
+    @font-face { font-family: bodyFont; src: url('assets/fonts/Roboto-Light.tff'); }
     body {
       -webkit-transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       -webkit-transform-style: preserve-3d;
@@ -49,7 +50,7 @@ tagline: Supporting tagline
       position: relative;
       margin: 0px auto;
       text-align: center;
-      font-family: 'headerFont';
+      font-family: 'bodyFont';
       -webkit-transform: translate3d(0px, 50px, 0px);
     }
     .display-table {
@@ -153,7 +154,7 @@ tagline: Supporting tagline
         <td>
           <ul class="posts">
           {% for post in site.posts limit:1 %}
-            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <strong>{{ post.date | date: '%B %d, %Y'}}</strong> <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
             <p>{{ post.tagline }}</p>
           {% endfor %}
           </ul>
@@ -161,7 +162,7 @@ tagline: Supporting tagline
         <td>
           <ul class="posts">
           {% for post in site.posts offset:1 limit:1 %}
-            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <strong>{{ post.date | date: '%B %d, %Y'}}</strong> <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
             <p>{{ post.tagline }}</p>
           {% endfor %}
           </ul>
@@ -169,7 +170,7 @@ tagline: Supporting tagline
         <td>
           <ul class="posts">
           {% for post in site.posts offset:2 limit:1 %}
-            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <strong>{{ post.date | date: '%B %d, %Y'}}</strong> <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
             <p>{{ post.tagline }}</p>
           {% endfor %}
           </ul>
