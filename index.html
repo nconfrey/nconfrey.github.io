@@ -43,6 +43,14 @@ tagline: Supporting tagline
       font-size: 48px;
       top: 16px;
       left: 0px;
+      -webkit-transform: translate3d(0px, 50px, 0px);
+    }
+    .posts {
+      position: relative;
+      margin: 0px auto;
+      text-align: center;
+      font-family: 'headerFont';
+      -webkit-transform: translate3d(0px, 50px, 0px);
     }
     .display-table {
       position: relative;
@@ -79,7 +87,6 @@ tagline: Supporting tagline
     <tbody>
       <tr class="display-row">
         <td class="display-row">
-          <text class="inner">Introspection</text>
           <a href="https://github.com/nconfrey/introspection">
             <img class="rower" src="/assets/introspection.png" 
               onmouseover="this.src='/assets/introspection.gif'"
@@ -87,7 +94,6 @@ tagline: Supporting tagline
           </a>
         </td>
         <td>
-          <text class="inner">Snazz Industries</text>
           <a href="http://snazzindustries.com">
             <img class="rower" src="/assets/snazz.JPG"
               onmouseover="this.src='/assets/snazz.gif'"
@@ -96,7 +102,6 @@ tagline: Supporting tagline
         </td>
         <td>
           <a href="http://envisiondo.org">
-          <text class="inner">EnvisionDo</text>
             <img class="rower" src="/assets/envisionDo.png"
               onmouseover="this.src='/assets/envisionDo2.jpg'"
               onmouseout="this.src='/assets/envisionDo.png'"/>
@@ -105,19 +110,16 @@ tagline: Supporting tagline
       </tr>
       <tr>
         <td>
-          <text class="inner">Scav</text>
           <a href="">
             <img class="rower" src="/assets/samplesquare.jpg" >
           </a>
         </td>
         <td>
-          <text class="inner">Google Summer of Code</text>
           <a href="https://github.com/nconfrey/GSoC">
             <img class="rower" src="/assets/GSoC.png" >
           </a>
         </td>
         <td>
-          <text class="inner">Vittles</text>
           <a href="http://eatvittles.com">
             <img class="rower" src="/assets/vittles.png"
               onmouseover="this.src='/assets/vittles2.jpg'"
@@ -130,13 +132,51 @@ tagline: Supporting tagline
 
   <div class="blogHeader">I also Blog</div>
 
-  Here's a sample "posts list".
-
+  <!--
   <ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
+          {% for post in site.posts %}
+            </br>
+            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <p>{{ post.tagline }}</p>
+          {% endfor %}    
   </ul>
+  -->
+
+  <!--Completely shameless with these tables -->
+  <table class="display-table">
+    <tbody>
+      <tr>
+        <td>
+          <ul class="posts">
+          {% for post in site.posts limit:1 %}
+            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <p>{{ post.tagline }}</p>
+          {% endfor %}
+          </ul>
+        </td>
+        <td>
+          <ul class="posts">
+          {% for post in site.posts offset:1 limit:1 %}
+            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <p>{{ post.tagline }}</p>
+          {% endfor %}
+          </ul>
+        </td>
+        <td>
+          <ul class="posts">
+          {% for post in site.posts offset:2 limit:1 %}
+            {{ post.date | date: '%B %d, %Y'}} <strong><h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+            <p>{{ post.tagline }}</p>
+          {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  
 </body>
 
 </html>
